@@ -13,6 +13,20 @@
     font-family: 'Segoe UI', sans-serif;
 }
 
+.ad-container {
+    margin: 20px auto;
+    text-align: center;
+    padding: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    max-width: 1200px;
+}
+
+.game-ad {
+    margin: 10px 0;
+    text-align: center;
+}
+
 body {
     background: var(--bg);
     color: var(--text);
