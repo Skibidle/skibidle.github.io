@@ -1,0 +1,182 @@
+:root {
+    --primary: #00ff88;
+    --secondary: #ff006e;
+    --bg: linear-gradient(135deg, #1a1a1a, #2d2d2d);
+    --text: #ffffff;
+    --card-bg: rgba(0, 0, 0, 0.8);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', sans-serif;
+}
+
+body {
+    background: var(--bg);
+    color: var(--text);
+    min-height: 100vh;
+    transition: all 0.3s ease;
+}
+
+#particles-js {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+.header {
+    text-align: center;
+    padding: 2rem;
+    backdrop-filter: blur(10px);
+    border-bottom: 3px solid var(--primary);
+    position: relative;
+}
+
+.glow {
+    text-shadow: 0 0 15px var(--primary);
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.search-container {
+    max-width: 600px;
+    margin: 0 auto;
+    position: relative;
+}
+
+#search {
+    width: 100%;
+    padding: 1rem;
+    border-radius: 25px;
+    border: 2px solid var(--primary);
+    background: rgba(255, 255, 255, 0.1);
+    color: var(--text);
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#search:focus {
+    outline: none;
+    box-shadow: 0 0 20px var(--primary);
+}
+
+.game-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    padding: 2rem;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.game-card {
+    background: var(--card-bg);
+    border-radius: 15px;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    border: 2px solid var(--primary);
+    backdrop-filter: blur(5px);
+    position: relative;
+}
+
+.game-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 0 30px var(--primary);
+}
+
+.game-image {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-bottom: 2px solid var(--primary);
+}
+
+.game-info {
+    padding: 1.5rem;
+}
+
+.game-title {
+    font-size: 1.4rem;
+    margin-bottom: 0.5rem;
+    color: var(--primary);
+}
+
+.game-description {
+    font-size: 1rem;
+    color: #cccccc;
+    margin-bottom: 1rem;
+}
+
+.loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: var(--bg);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+    transition: opacity 0.5s;
+}
+
+.spinner {
+    width: 50px;
+    height: 50px;
+    border: 5px solid var(--primary);
+    border-radius: 50%;
+    border-top-color: transparent;
+    animation: spin 1s linear infinite;
+}
+
+.theme-toggle {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    color: var(--text);
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+@keyframes spin {
+    to { transform: rotate(360deg); }
+}
+
+@media (max-width: 768px) {
+    .game-grid {
+        grid-template-columns: 1fr;
+        padding: 1rem;
+    }
+    
+    .glow {
+        font-size: 2rem;
+    }
+}
+
+.game-tags {
+    display: flex;
+    gap: 0.5rem;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.tag {
+    background: var(--secondary);
+    padding: 0.3rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.8rem;
+    font-weight: bold;
+}
+
+.rating {
+    color: #ffd700;
+    margin-top: 0.5rem;
+}
