@@ -11,9 +11,9 @@ const games = [
     {
         title: "Polytrack",
         description: "Race the Tracks and Improve Your Best.",
-        image: "images/game-thumbnails/polytrack.jpg",
+        image: "images/game-thumbnails/polytrack.jpeg",
         link: "games/poly track/index.html",
-        tags: ["Race", "Timed"],
+        tags: ["Skill", "Timed"],
         rating: 5
     }
 ];
