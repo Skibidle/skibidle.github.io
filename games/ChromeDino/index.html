@@ -7,10 +7,42 @@
     <title >chrome easter egg: t-rex runner</title>
     <link rel="stylesheet" href="index.css">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet"> 
+    <style>
+        /* Header Styles */
+        .game-header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 10px;
+            text-align: center;
+            z-index: 1000;
+        }
+
+        .game-header button {
+            background: #00ff88;
+            color: #000;
+            border: none;
+            padding: 10px 20px;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: background 0.3s ease;
+        }
+
+        .game-header button:hover {
+            background: #00cc66;
+        }
+    </style>
     <script src="index.js"></script>
 </head>
 
 <body id="t" class="offline">
+    <!-- Header with Back Button -->
+    <div class="game-header">
+        <button onclick="window.location.href='../index.html'">Back to Home</button>
+    </div>
     <div id="messageBox" class="sendmessage">
          <h1 style="text-align: center;font-family: 'Open Sans', sans-serif;">Press Space to start</h1>
          <div class="niokbutton" onclick="okbuttonsend()"></div>
