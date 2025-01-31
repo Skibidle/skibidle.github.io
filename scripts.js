@@ -1,12 +1,12 @@
 // Game data array - add your games here
 const games = [
     {
-        title: "Epic Adventure",
-        description: "Embark on a thrilling journey through magical realms.",
-        image: "images/game1-thumb.jpg",
-        link: "game1.html",
-        tags: ["RPG", "Fantasy"],
-        rating: 4
+        title: "Chrome Dino",
+        description: "Dodge the obstacles that come your way",
+        image: "images/game-thumbnails/ChromeDino.png",
+        link: "games/ChromeDino/index.html",
+        tags: ["Infinite", "Platformer"],
+        rating: 5
     },
     {
         title: "Space Shooter",
