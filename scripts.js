@@ -9,11 +9,11 @@ const games = [
         rating: 5
     },
     {
-        title: "Space Shooter",
-        description: "Battle through alien fleets in intense space combat.",
-        image: "images/game2-thumb.jpg",
-        link: "game2.html",
-        tags: ["Action", "Shooter"],
+        title: "Polytrack",
+        description: "Race the Tracks and Improve Your Best.",
+        image: "images/game-thumbnails/polytrack.jpg",
+        link: "games/poly track/index.html",
+        tags: ["Race", "Timed"],
         rating: 5
     }
 ];
