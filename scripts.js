@@ -15,6 +15,14 @@ const games = [
         link: "games/poly track/index.html",
         tags: ["Skill", "Timed"],
         rating: 5
+    },
+    {
+        title: "Gladihoppers",
+        description: "Fight to be the strongest in the Ancient Roman Empire.",
+        image: "images/game-thumbnails/Gladihoppers.jpg",
+        link: "games/Gladihoppers/index.html",
+        tags: ["Skill", "RPG"],
+        rating: 5
     }
 ];
 
