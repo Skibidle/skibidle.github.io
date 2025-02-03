@@ -1,1 +1,14 @@
+[data-theme="dark"] {
+  --bg: #1a1a1a;
+  --text: #e0e0e0;
+  --card-bg: #2d2d2d;
+  --accent: #4a90e2;
+}
 
+[data-theme="dark"] .game-card {
+  box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+}
+
+[data-theme="dark"] .modal {
+  background: rgba(0,0,0,0.9);
+}
