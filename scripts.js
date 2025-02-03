@@ -23,6 +23,14 @@ const games = [
         link: "games/Gladihoppers/index.html",
         tags: ["Skill", "RPG"],
         rating: 5
+    },
+    {
+        title: "1v1lol",
+        description: "Fight to be the strongest in the Battle Royale.",
+        image: "images/game-thumbnails/1v1lol.jpeg",
+        link: "games/1v1lol/1v1.lol.html",
+        tags: ["Skill", "Shooter"],
+        rating: 5
     }
 ];
 
