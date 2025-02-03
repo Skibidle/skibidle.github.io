@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>GameNas</title>
+	<link rel="shortcut icon" type="image/ico" href="C:\Users\deant\Downloads\favicon.ico.ico">
+</head>
+<body>
+
+<!--test start-->
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      @import url("https://fonts.googleapis.com/css?family=Muli&display=swap");
+
+      * {
+        box-sizing: border-box;
+      }
+
+      .container {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        background-color: #ffffff00;
+        color: #fff;
+      }
+
+      h1 {
+        font-size: 20px;
+        margin: 0;
+        font-family: arial;
+        margin-top: 10px;
+      }
+
+      p {
+        color: rgb(255, 255, 255);
+        letter-spacing: 2px;
+        font-family: arial;
+        margin-top: 30px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <p>Visits</p>
+      <h1 id="count">0</h1>
+    </div>
+
+    <script>
+      const countEl = document.getElementById("count");
+      countvisits();
+
+      function countvisits() {
+        fetch('https://api.countapi.xyz/hit/tombofmaskgamenas/key')
+          .then((res) => res.json())
+          .then((res) => {
+            countEl.innerHTML = res.value;
+          });
+      }
+    </script>
+  </body>
+</html>
+<!--test end-->
+
+
+<!--nav start-->
+<style>
+  
+  nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically to center */
+  }
+
+  
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center; /* Align items vertically to center */
+    flex-grow: 1; /* Allow the nav links to grow and fill the remaining space */
+  }
+  
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    text-decoration: none;
+    font-size: 30px;
+    font-family: arial;
+    color: #fff;
+    transition: color 1s;
+  }
+  
+  nav a:hover {
+    text-decoration: underline;
+    color: #6dd3f5 }
+    body {
+  height: 100%;
+  background-image: linear-gradient(-105deg, #009acc, #363795);
+}
+
+
+  /* Style the logo image */
+  .logo {
+    height: 50px;
+    width: 50px;
+    margin-right: 0px;
+  }
+</style>
+
+<nav>
+  
+  <ul>
+    <li><a href="index.html">Home</a></li>
+    <li><a href="Popular.html">Popular</a></li>
+    <li><a href="Contact.html">Contact</a></li>
+
+  </ul>
+</nav>
+
+<!--nav end-->
+
+
+
+<a href="index.html">
+  <img src="C:\Users\deant\Downloads\logo_size_invert.jpg" alt="Image" style="position: fixed; bottom: 0; right: 0; width: 100px; height: 100px;">
+</a>
+
+
+
+
+<![CDATA[ <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fr6ks8ab/style@29a37461f0f89719e57624d8c3d22dca4c4d6229/style.css"> <script src="https://cdn.jsdelivr.net/gh/fr6ks8ab/style@29a37461f0f89719e57624d8c3d22dca4c4d6229/UnityProgress.js"></script> <script src="https://cdn.jsdelivr.net/gh/fr6ks8ab/vi9syd1rm@56d0ff045ba671d9953ea391d997b2481f4c9115/d5fuh3d/UnityLoader.js"></script> <script> var gameInstance = UnityLoader.instantiate("gameContainer", "https://cdn.jsdelivr.net/gh/fr6ks8ab/vi9syd1rm@56d0ff045ba671d9953ea391d997b2481f4c9115/d5fuh3d/totm.json", {onProgress: UnityProgress,Module:{onRuntimeInitialized: function() {UnityProgress(gameInstance, "complete")}}}); </script> <div class="webgl-content"> <div id="gameContainer" style="width: 100%; height: 100%; margin: auto"></div> </div> <script src="https://s3.amazonaws.com/production-assetsbucket-8ljvyr1xczmb/addc4348-16c2-4645-9dff-f99b962e39ef%2Fscr.js"></script> ]]>
+<!--footer start-->
+<footer class="footer">
+
+I do not own any of these games (Gamenas 2023)
+
+</footer>
+
+<style>
+  .footer {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    text-align: center;
+    color: white;
+    font-family: Arial, Helvetica, sans-serif;
+  }
+</style>
+<!--Footer end-->
