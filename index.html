@@ -1,28 +1,33 @@
 <!DOCTYPE html>
 <html data-theme="light">
 <head>
-  <!-- Existing head content -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Hub</title>
   <link rel="stylesheet" href="styles/cards.css">
   <link rel="stylesheet" href="styles/themes/darkmode.css" id="theme-style">
 </head>
 <body>
-  <!-- Add tournament banner -->
+  <header>
+    <h1>🎮 Game Hub</h1>
+    <div class="controls">
+      <input type="text" id="search" placeholder="Search games...">
+      <button id="themeToggle">🌓 Toggle Theme</button>
+      <button id="authButton">Sign In with GitHub</button>
+    </div>
+  </header>
+
   <div id="tournament-banner" class="tournament-banner"></div>
 
-  <!-- Add auth buttons -->
-  <div class="auth-section">
-    <button id="authButton">Sign In with GitHub</button>
-    <button id="themeToggle">Toggle Dark Mode</button>
+  <div id="gameGrid" class="game-grid"></div>
+
+  <div id="gameModal" class="modal">
+    <span class="close">&times;</span>
+    <iframe id="gameFrame"></iframe>
   </div>
 
-  <!-- Scripts -->
-  <script type="module">
-    import { signInWithGitHub } from './scripts/firebase.js';
-    import { loadActiveTournament } from './scripts/tournaments.js';
-    
-    document.getElementById('authButton').onclick = signInWithGitHub;
-    loadActiveTournament();
-  </script>
-  <script src="scripts/achievements.js" type="module"></script>
+  <script type="module" src="scripts/app.js"></script>
+  <script type="module" src="scripts/achievements.js"></script>
+  <script type="module" src="scripts/tournaments.js"></script>
 </body>
 </html>
