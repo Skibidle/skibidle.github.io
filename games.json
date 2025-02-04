@@ -1,7 +1,7 @@
 [
   {
     "title": "Chess",
-    "path": "games/Chess/index.html",
+    "path": "games/chess/index.html",
     "thumbnail": "games/chess/chess.png",
     "description": "Get better you 500 ELO.",
     "category": "Strategy"
