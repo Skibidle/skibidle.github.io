@@ -68,3 +68,43 @@ if (savedTheme) document.body.dataset.theme = savedTheme;
 
 // GitHub Auth
 document.getElementById('authButton').onclick = signInWithGitHub;
+
+// === Add Game Functionality ===
+function addGame(title, path, thumbnail, description, category) {
+  const newGame = {
+    title,
+    path,
+    thumbnail,
+    description,
+    category
+  };
+
+  // Add to games array
+  games.push(newGame);
+
+  // Update games.json
+  fetch('games.json')
+    .then(res => res.json())
+    .then(data => {
+      data.push(newGame);
+      return fetch('games.json', {
+        method: 'PUT',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(data, null, 2)
+      });
+    })
+    .then(() => {
+      console.log(`Added ${title} to games.json`);
+      renderGames(games); // Refresh the game grid
+    })
+    .catch(err => console.error('Error adding game:', err));
+}
+
+
+addGame(
+  "Chess",
+  "games/chess/index.html",
+  "games/chess/icons/forward.png",
+  "Play the classic Chess game.",
+  "Puzzle"
+);
