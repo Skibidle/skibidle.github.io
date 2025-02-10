@@ -1,4 +1,17 @@
-/* Design System */
 @import url('base.css');
-@import url('components.css');
-@import url('utilities.css');
+@import url('components/cards.css');
+@import url('components/forms.css');
+@import url('components/navigation.css');
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 2rem;
+}
