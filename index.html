@@ -3,101 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gaming & Cognitive Science | Griffin Mortensen</title>
+    <title>Game Cognition Hub | Griffin Mortensen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>The Cognitive Science of Gaming</h1>
-        <p>Exploring how interactive media enhances human cognition</p>
+        <h1>Game Cognition Research Hub</h1>
+        <p>Exploring the Intersection of Play and Neuroscience</p>
     </header>
 
     <nav>
-        <ul>
-            <li><a href="#benefits">Key Benefits</a></li>
-            <li><a href="#research">Research</a></li>
-            <li><a href="#articles">Articles</a></li>
-            <li><a href="#about">About</a></li>
-        </ul>
+        <div class="nav-container">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search articles...">
+                <button onclick="searchArticles()"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M10 2a8 8 0 0 1 6.32 12.906l5.387 5.387-1.414 1.414-5.387-5.387A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg></button>
+            </div>
+            <div class="category-filter">
+                <button class="filter-btn active" onclick="filterSelection('all')">All</button>
+                <button class="filter-btn" onclick="filterSelection('neuroscience')">Neuroscience</button>
+                <button class="filter-btn" onclick="filterSelection('education')">Education</button>
+                <button class="filter-btn" onclick="filterSelection('psychology')">Psychology</button>
+                <button class="filter-btn" onclick="filterSelection('technology')">Technology</button>
+            </div>
+        </div>
     </nav>
 
-    <section id="benefits">
-        <h2>Key Cognitive Benefits</h2>
-        <div class="stats-grid">
-            <div class="stat-card">
-                <div class="stat-number">74%</div>
-                <p>Improvement in problem-solving skills for regular gamers</p>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">2.3x</div>
-                <p>Better spatial reasoning compared to non-gamers</p>
-            </div>
-            <div class="stat-card">
-                <div class="stat-number">68%</div>
-                <p>Reduction in cognitive decline in older adults who game</p>
-            </div>
-        </div>
-    </section>
-
-    <section id="research">
-        <div class="featured">
-            <h2>Groundbreaking Study (2023)</h2>
-            <p>"Regular gaming sessions of 30 minutes daily showed measurable improvements in executive functioning and working memory capacity."</p>
-            <p class="author">- Journal of Cognitive Neuroscience</p>
-        </div>
-    </section>
-
-    <section id="articles">
-        <h2>Featured Research Articles</h2>
-        <div class="article-grid">
-            <article class="article-card">
+    <main>
+        <section class="article-grid" id="articleGrid">
+            <!-- Article Cards -->
+            <article class="article-card" data-categories="neuroscience technology" data-search="neuroplasticity gaming brain-training">
                 <div class="card-content">
-                    <h3>Neuroplasticity Through Gaming</h3>
-                    <p>Discover how action games stimulate neural pathway development and enhance brain plasticity in adults.</p>
-                    <a href="neuroplasticity.html" class="read-more">Read Study</a>
+                    <span class="category-tag neuroscience">Neuroscience</span>
+                    <h3>Neuroplasticity in Action: How Games Rewire the Brain</h3>
+                    <p class="meta">Published: March 15, 2023 | 8 min read</p>
+                    <p>Groundbreaking research showing how 3D platform games increase grey matter density in hippocampal regions...</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">Read Study</a>
+                        <div class="rating">4.9 ★</div>
+                    </div>
                 </div>
             </article>
 
-            <article class="article-card">
+            <article class="article-card" data-categories="education psychology" data-search="learning gamification education children">
                 <div class="card-content">
-                    <h3>Esports & Decision Making</h3>
-                    <p>Competitive gamers show 60% faster decision-making abilities in high-pressure situations.</p>
-                    <a href="esports.html" class="read-more">Read Analysis</a>
+                    <span class="category-tag education">Education</span>
+                    <h3>Gamified Learning: Boosting Classroom Engagement by 40%</h3>
+                    <p class="meta">Published: February 28, 2023 | 6 min read</p>
+                    <p>Case study analysis of schools implementing game-based learning modules in STEM curricula...</p>
+                    <div class="card-footer">
+                        <a href="#" class="read-more">Read Analysis</a>
+                        <div class="rating">4.7 ★</div>
+                    </div>
                 </div>
             </article>
 
-            <article class="article-card">
-                <div class="card-content">
-                    <h3>VR Cognitive Training</h3>
-                    <p>How immersive virtual reality games are revolutionizing rehabilitation therapies.</p>
-                    <a href="vr-training.html" class="read-more">Explore VR</a>
-                </div>
-            </article>
-        </div>
-    </section>
+            <!-- Add more articles following the same structure -->
+        </section>
 
-    <section id="about">
-        <h2>About the Research</h2>
-        <div class="content-grid">
-            <div class="about-card">
-                <h3>Methodology</h3>
-                <p>Longitudinal study tracking 1,200 participants over 5 years using fMRI and cognitive assessments.</p>
-            </div>
-            <div class="about-card">
-                <h3>Game Genres Analyzed</h3>
-                <ul>
-                    <li>Action/Adventure</li>
-                    <li>Puzzle & Strategy</li>
-                    <li>MMORPGs</li>
-                    <li>Simulation Games</li>
-                </ul>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>&copy; 2023 Griffin Mortensen | Cognitive Gaming Research</p>
-        <p>Contact: research@cogaming.com</p>
-    </footer>
-</body>
-</html>
+        <aside class="sidebar">
+            <div class="sidebar-section">
+                <h3>Top Research Areas</h
