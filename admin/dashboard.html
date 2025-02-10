@@ -3,20 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Contact | Game Cognition Research</title>
-    <link rel="stylesheet" href="/static/styles/main.css">
+    <title>Admin Dashboard | Game Cognition Research</title>
+    <link rel="stylesheet" href="../static/styles/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script type="module" src="../static/scripts/modules/admin.js"></script>
 </head>
 <body>
     <div id="navbar-container"></div>
-    <main class="container">
-        <h1>Contact Us</h1>
-        <form id="contact-form">
-            <input type="text" placeholder="Name" required>
-            <input type="email" placeholder="Email" required>
-            <textarea placeholder="Message" required></textarea>
-            <button type="submit">Send</button>
-        </form>
+    <main class="admin-container">
+        <h1>Admin Dashboard</h1>
+        <div class="analytics-section">
+            <canvas id="trafficChart"></canvas>
+        </div>
     </main>
-    <div id="footer-container"></div>
 </body>
 </html>
