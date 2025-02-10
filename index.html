@@ -3,63 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Cognition Hub | Griffin Mortensen</title>
+    <title>Game Cognition Research | Griffin Mortensen</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <h1>Game Cognition Research Hub</h1>
-        <p>Exploring the Intersection of Play and Neuroscience</p>
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Game Cognition Research</h1>
+            <p>Exploring the Neuroscience of Interactive Media</p>
+        </div>
     </header>
 
-    <nav>
+    <nav class="main-nav">
         <div class="nav-container">
-            <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search articles...">
-                <button onclick="searchArticles()"><svg aria-hidden="true" viewBox="0 0 24 24" width="24" height="24"><path d="M10 2a8 8 0 0 1 6.32 12.906l5.387 5.387-1.414 1.414-5.387-5.387A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/></svg></button>
+            <div class="search-bar">
+                <input type="text" placeholder="Search research papers..." class="search-input">
+                <button class="search-btn">
+                    <svg class="search-icon" viewBox="0 0 24 24">
+                        <path d="M10 2a8 8 0 0 1 6.32 12.906l5.387 5.387-1.414 1.414-5.387-5.387A8 8 0 1 1 10 2zm0 2a6 6 0 1 0 0 12 6 6 0 0 0 0-12z"/>
+                    </svg>
+                </button>
             </div>
             <div class="category-filter">
-                <button class="filter-btn active" onclick="filterSelection('all')">All</button>
-                <button class="filter-btn" onclick="filterSelection('neuroscience')">Neuroscience</button>
-                <button class="filter-btn" onclick="filterSelection('education')">Education</button>
-                <button class="filter-btn" onclick="filterSelection('psychology')">Psychology</button>
-                <button class="filter-btn" onclick="filterSelection('technology')">Technology</button>
+                <button class="filter-btn active">All</button>
+                <button class="filter-btn">Neuroscience</button>
+                <button class="filter-btn">Psychology</button>
+                <button class="filter-btn">Education</button>
+                <button class="filter-btn">Technology</button>
             </div>
         </div>
     </nav>
 
-    <main>
-        <section class="article-grid" id="articleGrid">
-            <!-- Article Cards -->
-            <article class="article-card" data-categories="neuroscience technology" data-search="neuroplasticity gaming brain-training">
-                <div class="card-content">
-                    <span class="category-tag neuroscience">Neuroscience</span>
-                    <h3>Neuroplasticity in Action: How Games Rewire the Brain</h3>
-                    <p class="meta">Published: March 15, 2023 | 8 min read</p>
-                    <p>Groundbreaking research showing how 3D platform games increase grey matter density in hippocampal regions...</p>
-                    <div class="card-footer">
-                        <a href="#" class="read-more">Read Study</a>
-                        <div class="rating">4.9 ★</div>
-                    </div>
+    <main class="content-grid">
+        <article class="research-card">
+            <div class="card-border"></div>
+            <div class="card-content">
+                <div class="card-header">
+                    <span class="category-tag cognitive">Cognitive Science</span>
+                    <time class="publish-date">March 15, 2023</time>
                 </div>
-            </article>
-
-            <article class="article-card" data-categories="education psychology" data-search="learning gamification education children">
-                <div class="card-content">
-                    <span class="category-tag education">Education</span>
-                    <h3>Gamified Learning: Boosting Classroom Engagement by 40%</h3>
-                    <p class="meta">Published: February 28, 2023 | 6 min read</p>
-                    <p>Case study analysis of schools implementing game-based learning modules in STEM curricula...</p>
-                    <div class="card-footer">
-                        <a href="#" class="read-more">Read Analysis</a>
-                        <div class="rating">4.7 ★</div>
-                    </div>
-                </div>
-            </article>
-
-            <!-- Add more articles following the same structure -->
-        </section>
-
-        <aside class="sidebar">
-            <div class="sidebar-section">
-                <h3>Top Research Areas</h
+                <h2 class="card-title">Neuroplasticity in 3D Gaming Environments</h2>
+                <p class="card-excerpt">Longitudinal study demonstrating 23% increase in hippocampal volume among regular players of spatial navigation games...</p>
+                <div class="card-footer">
+                    <div class="metrics">
+                        <div class="metric">
+                            <svg class="metric-icon" viewBox="0 0 24 24"><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm3.833 5.337l.087.07 1.414 1.414-.07.087-4.243 4.243a1 1 0 0 1-1.32.083l-.094-.083-2.829-2.828a1 1 0 0 1 1.32-1.497l.094.083 2.122 2.121 3.535-3.535z"/></svg>
+                            <span>Peer Reviewed</span>
+                        </div>
+                        <div class="metric">
+                            <svg class="metric-icon" viewBox="0 0 24 24"><path d="M12 2c5.523 0 10 4.477 10 10s-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2zm0 2a8 8 0 1 0 0 16 8 8 0 0 0 0-16zm0 1.5a1 1 0 0 1 1 1v4.5h3.5a1 1 0 0 1 0 2H12a1 1 0 0 1-1-1V
