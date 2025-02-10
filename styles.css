@@ -1,180 +1,89 @@
+/* styles.css */
 :root {
-  --primary: #2A2A2A;
-  --secondary: #3A86FF;
-  --accent: #FFBE0B;
-  --light: #F8F9FA;
-  --dark: #212529;
+    --primary: #2C3E50;
+    --secondary: #3498DB;
+    --accent: #E74C3C;
+    --light: #ECF0F1;
+    --dark: #2C3E50;
+    --success: #27AE60;
 }
 
-/* Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
+/* Base Styles */
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  line-height: 1.7;
-  background-color: var(--light);
-  color: var(--dark);
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background: var(--light);
+    color: var(--dark);
 }
 
-/* Header Styles */
+/* Header */
 header {
-  background: linear-gradient(135deg, var(--primary), #1A1A1A);
-  color: white;
-  padding: 4rem 0;
-  text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-}
-
-header h1 {
-  font-size: 3rem;
-  margin-bottom: 1rem;
-  letter-spacing: -1px;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-}
-
-/* Navigation */
-nav {
-  background: white;
-  padding: 1.5rem;
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-}
-
-nav ul {
-  display: flex;
-  justify-content: center;
-  gap: 2rem;
-  list-style: none;
-}
-
-nav a {
-  color: var(--primary);
-  text-decoration: none;
-  font-weight: 600;
-  padding: 0.5rem 1rem;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-}
-
-nav a:hover {
-  background: var(--secondary);
-  color: white;
-}
-
-/* Section Styling */
-section {
-  padding: 4rem 2rem;
-  margin: 2rem auto;
-  max-width: 1200px;
-}
-
-/* Card Grid Layout */
-.article-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 2rem;
-  margin-top: 2rem;
-}
-
-/* Article Cards */
-.article-card {
-  background: white;
-  border-radius: 10px;
-  overflow: hidden;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
-}
-
-.article-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-content {
-  padding: 1.5rem;
-}
-
-.article-card h3 {
-  color: var(--primary);
-  margin-bottom: 1rem;
-  font-size: 1.3rem;
-}
-
-.article-card p {
-  color: #666;
-  margin-bottom: 1.5rem;
-}
-
-.read-more {
-  display: inline-block;
-  background: var(--secondary);
-  color: white;
-  padding: 0.5rem 1.5rem;
-  border-radius: 4px;
-  text-decoration: none;
-  transition: background 0.3s ease;
-}
-
-.read-more:hover {
-  background: #2979FF;
-}
-
-/* Featured Content */
-.featured {
-  background: var(--secondary);
-  color: white;
-  padding: 3rem;
-  border-radius: 10px;
-  margin: 3rem 0;
-  text-align: center;
-}
-
-/* Statistics Grid */
-.stats-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 2rem;
-  margin: 2rem 0;
-}
-
-.stat-card {
-  background: white;
-  padding: 2rem;
-  border-radius: 10px;
-  text-align: center;
-  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
-}
-
-.stat-number {
-  font-size: 2.5rem;
-  color: var(--secondary);
-  font-weight: 700;
-  margin-bottom: 0.5rem;
-}
-
-/* Footer */
-footer {
-  background: var(--primary);
-  color: white;
-  text-align: center;
-  padding: 2rem;
-  margin-top: 4rem;
-}
-
-/* Responsive Design */
-@media (max-width: 768px) {
-  .stats-grid {
-    grid-template-columns: 1fr;
-  }
-  
-  nav ul {
-    flex-direction: column;
+    background: linear-gradient(135deg, var(--primary), #1B2631);
+    color: white;
+    padding: 4rem 2rem;
     text-align: center;
-    gap: 1rem;
-  }
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
 }
+
+/* Navigation and Search */
+.nav-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
+.search-container {
+    position: relative;
+    max-width: 600px;
+    margin: 0 auto 1rem;
+}
+
+#searchInput {
+    width: 100%;
+    padding: 1rem 2rem;
+    border: 2px solid var(--secondary);
+    border-radius: 50px;
+    font-size: 1.1rem;
+    transition: all 0.3s ease;
+}
+
+#searchInput:focus {
+    outline: none;
+    box-shadow: 0 0 15px rgba(52, 152, 219, 0.3);
+}
+
+.search-container button {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.category-filter {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 1rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.5rem;
+    border: 2px solid var(--secondary);
+    border-radius: 25px;
+    background: white;
+    color: var(--secondary);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.filter-btn.active,
+.filter-btn:hover {
+    background: var(--secondary);
+    color: white;
+}
+
+/* Article Grid */
