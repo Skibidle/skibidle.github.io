@@ -1,0 +1,30 @@
+:root {
+    --primary: #2B2D42;
+    --secondary: #8D99AE;
+    --accent: #EF233C;
+    --light: #EDF2F4;
+    --dark: #1D1E22;
+    --success: #2DC653;
+    --warning: #FFD166;
+    --radius-sm: 4px;
+    --radius-md: 8px;
+    --radius-lg: 16px;
+    --shadow-sm: 0 1px 3px rgba(0,0,0,0.12);
+    --shadow-md: 0 4px 6px rgba(0,0,0,0.16);
+}
+
+body {
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
+    line-height: 1.6;
+    background: var(--light);
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+}
+
+/* Responsive Layout */
+.container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 1.5rem;
+}
