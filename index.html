@@ -3,78 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Game Cognition Research | Griffin Mortensen</title>
-    <link rel="stylesheet" href="static/styles/main.css">
-    <script type="module" src="static/scripts/main.js"></script>
+    <title>Article Hub</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <div id="navbar-container"></div>
+    <nav class="navbar">
+        <div class="container">
+            <a href="/" class="logo">Article Hub</a>
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search articles...">
+                <button onclick="searchArticles()">Search</button>
+            </div>
+            <ul class="nav-links">
+                <li><a href="/">Home</a></li>
+                <li><a href="#latest">Latest</a></li>
+                <li><a href="#categories">Categories</a></li>
+                <li><a href="#about">About</a></li>
+            </ul>
+        </div>
+    </nav>
+
     <main class="container">
-        <!-- Hero Section -->
-        <section class="hero-section">
-            <h1>Explore the Science of Gaming</h1>
-            <p>Discover how games are shaping the future of cognitive research.</p>
-            <a href="#featured-research" class="cta-button">Get Started</a>
-        </section>
-
-        <!-- Featured Research -->
-        <section id="featured-research" class="featured-research">
-            <h2>Featured Research</h2>
-            <div class="research-grid">
-                <article class="research-card">
-                    <div class="card-header">
-                        <span class="category-tag neuroscience">Neuroscience</span>
-                        <time class="publish-date">March 15, 2023</time>
-                    </div>
-                    <h3 class="card-title">Neuroplasticity in 3D Gaming</h3>
-                    <p class="card-excerpt">Discover how 3D gaming environments enhance brain plasticity...</p>
-                    <a href="#" class="read-more">Read More →</a>
-                </article>
-                <!-- Add more featured articles here -->
-            </div>
-        </section>
-
-        <!-- Suggested Reads -->
-        <section class="suggested-reads">
-            <h2>Suggested Reads</h2>
-            <div class="suggested-grid">
-                <article class="suggested-card">
-                    <h3>The Psychology of Puzzle Games</h3>
-                    <p>How puzzle games improve problem-solving skills...</p>
-                    <a href="#" class="read-more">Read Now</a>
-                </article>
-                <article class="suggested-card">
-                    <h3>VR and Cognitive Training</h3>
-                    <p>Exploring the benefits of VR in rehabilitation...</p>
-                    <a href="#" class="read-more">Read Now</a>
-                </article>
-                <article class="suggested-card">
-                    <h3>Esports and Decision Making</h3>
-                    <p>How competitive gaming enhances quick thinking...</p>
-                    <a href="#" class="read-more">Read Now</a>
-                </article>
-            </div>
-        </section>
-
-        <!-- Popular Categories -->
-        <section class="popular-categories">
-            <h2>Popular Categories</h2>
-            <div class="categories-grid">
-                <a href="#" class="category-card neuroscience">
-                    <h3>Neuroscience</h3>
-                    <p>Explore how gaming affects the brain.</p>
-                </a>
-                <a href="#" class="category-card psychology">
-                    <h3>Psychology</h3>
-                    <p>Understand the mental benefits of gaming.</p>
-                </a>
-                <a href="#" class="category-card education">
-                    <h3>Education</h3>
-                    <p>Learn how games are revolutionizing learning.</p>
-                </a>
+        <section class="featured-articles">
+            <h2>Featured Articles</h2>
+            <div class="articles-grid" id="articlesContainer">
+                <!-- Articles will be loaded here dynamically -->
             </div>
         </section>
     </main>
-    <div id="footer-container"></div>
+
+    <footer>
+        <div class="container">
+            <p>© 2023 Article Hub. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
 </body>
 </html>
